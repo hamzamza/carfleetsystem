@@ -1,10 +1,12 @@
-package com.example.car_fleet_managment_system.repositories;
+package com.example.car_fleet_managment_system.services;
 
 import com.example.car_fleet_managment_system.modules.Voyage;
+import com.example.car_fleet_managment_system.repositories.VoyageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class VoyageService {
     @Autowired
     private VoyageRepository voyageRepository;

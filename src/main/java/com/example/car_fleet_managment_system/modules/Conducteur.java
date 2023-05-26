@@ -1,9 +1,6 @@
 package com.example.car_fleet_managment_system.modules;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,13 +12,16 @@ import java.util.Date;
 public
 class Conducteur {
 
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id ;
+    @Column
     private String CIN;
 
     @Column(name = "nom")
     private String nom;
-
+    @Column(name = "password")
+    private String password ;
     @Column(name = "matricule")
     private String matricule;
 

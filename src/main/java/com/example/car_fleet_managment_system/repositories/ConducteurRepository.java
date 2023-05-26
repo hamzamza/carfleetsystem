@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ConducteurRepository  extends CrudRepository<Conducteur, Long> {
+    Conducteur findByNom(String username) ;
 }
